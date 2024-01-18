@@ -1,7 +1,7 @@
 # .PHONY: gdb qemu qemu-gdb clean
 ## compile
 
-bomb:
+bomb: student-number.txt
 	./generate_bomb.sh
 
 clean:
