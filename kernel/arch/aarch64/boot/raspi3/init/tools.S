@@ -72,6 +72,8 @@ BEGIN_FUNC(arm64_elX_to_el1)
 	/* BLANK BEGIN */
 	/* BLANK END */
 	/* LAB 1 TODO 1 END */
+	//TODO:读取使用MRS 
+	mrs x9,CurrentEL
 
 	// Check the current exception level.
 	cmp x9, CURRENTEL_EL1
@@ -91,6 +93,15 @@ BEGIN_FUNC(arm64_elX_to_el1)
 	/* BLANK BEGIN */
 	/* BLANK END */
 	/* LAB 1 TODO 2 END */
+	//TODO:可以借鉴下面从 EL2->EL1对该寄存器设置 //也可以查阅资料
+	//https://developer.arm.com/documentation/ddi0500/j/CHDDGJID
+	//msr mrs
+	adr x9,.Ltarget
+	msr elr_el3,x9
+	mov x9, SPSR_ELX_DAIF | SPSR_ELX_EL1H
+	msr spsr_el3, x9
+
+
 
 .Lin_el2:
 	// Disable EL1 timer traps and the timer offset.
@@ -266,8 +277,8 @@ BEGIN_FUNC(el1_mmu_activate)
 	mrs     x8, sctlr_el1
 	/* Enable MMU */
 	/* LAB 1 TODO 4 BEGIN */
-	/* BLANK BEGIN */
-	/* BLANK END */
+
+	orr x8,x8,#SCTLR_EL1_M
 	/* LAB 1 TODO 4 END */
 	/* Disable alignment checking */
 	bic     x8, x8, #SCTLR_EL1_A
