@@ -8,7 +8,11 @@
 # PURPOSE.
 # See the Mulan PSL v2 for more details.
 
+<<<<<<< HEAD
 target_sources(${kernel_target} PRIVATE head.S.obj main.c tools.S.obj)
+=======
+target_sources(${kernel_target} PRIVATE head.S.obj main.c.obj tools.S.obj)
+>>>>>>> lab1
 
 add_subdirectory(boot)
 

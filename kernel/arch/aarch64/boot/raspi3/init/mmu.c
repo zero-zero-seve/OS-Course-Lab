@@ -16,9 +16,9 @@ typedef unsigned long u64;
 typedef unsigned int u32;
 
 /* Physical memory address space: 0-1G */
-#define PHYSMEM_START   (0x0UL)
+#define PHYSMEM_START (0x0UL)
 #define PERIPHERAL_BASE (0x3F000000UL)
-#define PHYSMEM_END     (0x40000000UL)
+#define PHYSMEM_END (0x40000000UL)
 
 /* The number of entries in one page table page */
 #define PTP_ENTRIES 512

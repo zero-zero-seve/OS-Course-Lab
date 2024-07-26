@@ -8,5 +8,9 @@
 # PURPOSE.
 # See the Mulan PSL v2 for more details.
 
+<<<<<<< HEAD
 target_sources(${kernel_target} PRIVATE printk.c.obj radix.c.obj ring_buffer.c.obj rbtree.c
+=======
+target_sources(${kernel_target} PRIVATE printk.c.obj radix.c.obj ring_buffer.c.obj rbtree.c.obj
+>>>>>>> lab1
                                         mem_usage_info_tool.c.obj)

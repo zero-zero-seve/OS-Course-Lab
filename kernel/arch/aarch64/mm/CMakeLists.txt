@@ -15,7 +15,11 @@ target_sources(
             memcpy.S.obj
             memmove.S.obj
             memset.c.obj
+<<<<<<< HEAD
             page_table.c
+=======
+            page_table.c.obj
+>>>>>>> lab1
             page_table.S.obj
             tlb.c.obj
             uaccess.c.obj

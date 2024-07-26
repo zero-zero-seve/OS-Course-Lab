@@ -9,4 +9,8 @@
 # See the Mulan PSL v2 for more details.
 
 target_sources(${kernel_target} PRIVATE ipi.c.obj irq_entry.c.obj irq_entry.S.obj irq.S.obj
+<<<<<<< HEAD
                                         pgfault.c)
+=======
+                                        pgfault.c.obj)
+>>>>>>> lab1
